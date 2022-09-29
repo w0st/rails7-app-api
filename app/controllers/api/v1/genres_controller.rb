@@ -4,7 +4,7 @@ class Api::V1::GenresController < ApplicationController
   end
 
   def show
-    render json: ::Api::V1::GenrePresenter.new(current_genre).basic
+    @genre = current_genre
   end
   
   private
